@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+body{
+    background: black;
+}
+h2{
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.textoRojo{
+    text-shadow: 0 0 5px #e75353,
+    0 0 10px  #e75353,
+    0 0 20px  #e75353,
+    0 0 30px  #e75353,
+    0 0 40px  #e75353,
+    0 0 50px  #e75353,
+    0 0 60px  #e75353,
+    0 0 70px  #e75353;
+    
+}
+
+.textoAmarillo{
+    text-shadow: 0 0 5px #fff45e,
+    0 0 10px  #fff45e,
+    0 0 20px  #fff45e,
+    0 0 30px  #fff45e,
+    0 0 40px  #fff45e,
+    0 0 50px  #fff45e,
+    0 0 60px  #fff45e,
+    0 0 70px  #fff45e;
+    
+}
+.textoVerde{
+    text-shadow: 0 0 5px #76e75a,
+    0 0 10px  #76e75a,
+    0 0 20px  #76e75a,
+    0 0 30px  #76e75a,
+    0 0 40px  #76e75a,
+    0 0 50px  #76e75a,
+    0 0 60px  #76e75a,
+    0 0 70px  #76e75a;
+    
+}
+
+.botonRojo{
+    background: #e75353;
+}
+.botonAmarillo{
+    background: #fff45e;
+}
+.botonVerde{
+    background: #76e75a;
+}
+.btn {
+    transition: all 0.3s ease;
+  } 
+
+.btn:hover{
+    filter: brightness(120%);
+}
