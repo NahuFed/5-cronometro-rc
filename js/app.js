@@ -1,24 +1,4 @@
-
-
-
-//martes 11 de abril de 2023
-//11:35:00
-// Array de días de la semana
-const daysOfWeek = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
-
-// Array de meses
-const months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
-
-
 let fechaActual = new Date()
-
-function determinarTurno(){
-    if (fechaActual.getHours() > 12){
-        return 'PM'
-    } else {
-        return 'AM'}
-}
-
 
 function resetCronometro(){
 let _hora = document.querySelector('#hora')
@@ -130,7 +110,7 @@ let id1,id2,id3,id4
 
     }
     
-    // iniciarCronometro()
+  
 
 function pausarCronometro(){
     clearInterval(id1)
@@ -138,15 +118,26 @@ function pausarCronometro(){
     clearInterval(id3)
     clearInterval(id4)
     bandera = false
-}
-// setTimeout(pausarCronometro,10000)
-   
-botonIniciar = document.querySelector('.botonRojo')
+}   
+botonIniciar = document.querySelector('.botonVerde')
 botonReset = document.querySelector('.botonAmarillo')
-botonPausa = document.querySelector('.botonVerde')
+botonPausa = document.querySelector('.botonRojo')
 
-botonIniciar.addEventListener('click',iniciarCronometro)
-botonReset.addEventListener('click',resetCronometro)
-botonPausa.addEventListener('click',pausarCronometro)
+botonIniciar.addEventListener('click',()=>{
+    let cronometro = document.querySelector('.container')
+    cronometro.className = 'container textoVerde'
+    iniciarCronometro()
+
+})
+botonReset.addEventListener('click',()=>{
+    let cronometro = document.querySelector('.container')
+    cronometro.className = 'container textoAmarillo'
+    resetCronometro()})
+
+
+botonPausa.addEventListener('click',()=>{
+    let cronometro = document.querySelector('.container')
+    cronometro.className = 'container textoRojo'
+    pausarCronometro()})
     
 

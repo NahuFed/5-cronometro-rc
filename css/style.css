@@ -1,6 +1,6 @@
 
   @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
-
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 body{
     display: flex;
     flex-direction: column;
@@ -19,9 +19,10 @@ main{
 body{
     background: black;
 }
-h2{
+h1,h2{
     color: white;
-    font-family: 'VT323', monospace;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3rem;
 }
 
 .textoRojo{
@@ -37,14 +38,14 @@ h2{
 }
 
 .textoAmarillo{
-    text-shadow: 0 0 5px #fff45e,
-    0 0 10px  #fff45e,
-    0 0 20px  #fff45e,
-    0 0 30px  #fff45e,
-    0 0 40px  #fff45e,
-    0 0 50px  #fff45e,
-    0 0 60px  #fff45e,
-    0 0 70px  #fff45e;
+    text-shadow: 0 0 5px #867f1e,
+    0 0 10px  #867f1e,
+    0 0 20px  #867f1e,
+    0 0 30px  #867f1e,
+    0 0 40px  #867f1e,
+    0 0 50px  #867f1e,
+    0 0 60px  #867f1e,
+    0 0 70px  #867f1e;
     
 }
 .textoVerde{
@@ -63,7 +64,7 @@ h2{
     background: #e75353;
 }
 .botonAmarillo{
-    background: #fff45e;
+    background: #867f1e;
 }
 .botonVerde{
     background: #76e75a;
