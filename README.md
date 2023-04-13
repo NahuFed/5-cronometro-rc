@@ -1,6 +1,5 @@
-# Titulo principal
- Cronometro
-
+# Generaciones
+Ejercicio n°5 del TP de DOM Y BOM de rollingcode school que consiste en crear un cronometro con las funciones de iniciar pausar y reset
 ## Librerias / herramientas 🛠
 
 - [Javascript ES6](https://262.ecma-international.org/6.0/)
