@@ -36,7 +36,7 @@ _milisegundos.innerHTML= '00'
 }
 // resetCronometro()
 function imprimirmilisegundos(){
-    if (milisegundos<100){
+    if (milisegundos<99){
     `${milisegundos}`//imprime el milisegundos
     milisegundos++} //incrimenta el milisegundos
     else{
@@ -78,45 +78,75 @@ function imprimirHoras(){
 
     function milisegundosCronometro(){
         fechaActual = new Date()    
-        let milisegundos = document.querySelector('#milisegundos')
-        milisegundos.innerHTML = `${imprimirmilisegundos() } `
+        let _milisegundos = document.querySelector('#milisegundos')
+
+        if(milisegundos < 9){
+            _milisegundos.innerHTML = `0${imprimirmilisegundos() } `
+        }else{
+            _milisegundos.innerHTML = `${imprimirmilisegundos() }` 
+        }
+        
     }
     function segundosCronometro(){
         fechaActual = new Date()    
-        let segundos = document.querySelector('#segundos')
-        segundos.innerHTML = `${imprimirsegundos() }: `
+        let _segundos = document.querySelector('#segundos')
+        if(segundos < 9){
+            _segundos.innerHTML = `0${imprimirsegundos() }:`
+        }else{
+            _segundos.innerHTML = `${imprimirsegundos() }:` 
+        }
     }
 
     function minutosCronometro(){
         fechaActual = new Date()    
-        let minutos = document.querySelector('#minutos')
-        minutos.innerHTML = `${imprimirminutos()}: `
+        let _minutos = document.querySelector('#minutos')
+        if(minutos < 9){
+            _minutos.innerHTML = `0${imprimirminutos() }:`
+        }else{
+            _minutos.innerHTML = `${imprimirminutos() }:` 
+        }
     }    
 
     function horaCronometro(){
         fechaActual = new Date()    
-        let hora = document.querySelector('#hora')
-        hora.innerHTML = `${imprimirHoras()}: `
+        let _hora = document.querySelector('#hora')
+        if(horas < 9){
+            _horas.innerHTML = `0${imprimirHoras() }:`
+        }else{
+            _horas.innerHTML = `${imprimirHoras() }:` 
+        }
     }    
 let id1,id2,id3,id4
 
+    let bandera = false
+    function iniciarCronometro(){
+        if (bandera === false){
+            id1 = setInterval(milisegundosCronometro,10)
+            id2 = setInterval(segundosCronometro,1000)
+            id3 = setInterval(minutosCronometro,60000)
+            id4 = setInterval(horaCronometro,3600000)
+            bandera = true
+        }        
 
-    function iniciarCronometro(){        
-        id1 = setInterval(milisegundosCronometro,10)
-        id2 = setInterval(segundosCronometro,1000)
-        id3 = setInterval(minutosCronometro,60000)
-        id4 = setInterval(horaCronometro,3600000)
     }
     
-    iniciarCronometro()
+    // iniciarCronometro()
 
 function pausarCronometro(){
     clearInterval(id1)
     clearInterval(id2)
     clearInterval(id3)
     clearInterval(id4)
+    bandera = false
 }
-setTimeout(pausarCronometro,10000)
-    
+// setTimeout(pausarCronometro,10000)
+   
+botonIniciar = document.querySelector('.botonRojo')
+botonReset = document.querySelector('.botonAmarillo')
+botonPausa = document.querySelector('.botonVerde')
+
+botonIniciar.addEventListener('click',iniciarCronometro)
+botonReset.addEventListener('click',resetCronometro)
+botonPausa.addEventListener('click',pausarCronometro)
     
 
